@@ -38,10 +38,18 @@ describe("App component", () => {
         {
           artiste: "bob",
           title: "One Love",
-          id: Math.floor(Math.random() * 1000),
+          id: 30,
         },
       ],
     });
+    expect(wrapper.vm.music).toStrictEqual([
+      {
+        artiste: "bob",
+        id: 30,
+        title: "One Love",
+      },
+    ]);
     expect(wrapper.findComponent(MusicDetails).exists()).toBeTruthy();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });

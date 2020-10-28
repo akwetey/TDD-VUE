@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component submit music list and navbar component 1`] = `
+<div id="app">
+  <div class="navbar">
+    <h1>Reggae Music List</h1>
+    <p>You have 1 currently</p>
+  </div>
+  <div class="music-list">
+    <ul>
+      <div>
+        <li>
+          <div class="title">One Love</div>
+          <div class="artiste">bob</div>
+        </li>
+      </div>
+    </ul>
+  </div>
+  <form><input type="text" placeholder="Music Title" name="title" required="required"> <input type="text" placeholder="Artiste" name="artiste" required="required"> <button type="submit">
+      Submit
+    </button></form>
+</div>
+`;
