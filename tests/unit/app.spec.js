@@ -33,6 +33,7 @@ describe("App component", () => {
     expect(wrapper.findComponent(Navbar).exists()).toBeTruthy();
     const button = wrapper.find("button");
     button.trigger("click");
+    wrapper.vm.handleSubmit();
     await wrapper.setData({
       music: [
         {
@@ -51,5 +52,11 @@ describe("App component", () => {
     ]);
     expect(wrapper.findComponent(MusicDetails).exists()).toBeTruthy();
     expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it("delete a list when li is clicked", async () => {
+    const li = wrapper.find("li");
+    await li.trigger("click");
+    expect(wrapper.vm.deleteList).toBeTruthy();
   });
 });
